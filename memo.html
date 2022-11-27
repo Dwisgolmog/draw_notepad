@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memo</title>
+    <link rel="stylesheet" href="memo.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="nav1">
+            <button type="button" id="addButton" style="width: 100px; height: 40px;">SAVE</button>
+            <button type="button" id="loadButton" style="width: 100px; height: 40px;">LOAD</button>
+        </div>
+        <hr>
+        <div class="nav2">
+            <form name="font">
+            <select name="mysize" onchange="font_size(value)">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select>
+            <select name="myfont" onchange="font_change(value)">
+                <option value="1">나눔스퀘어</option>
+                <option value="2">휴먼범석체</option>
+                <option value="3">평창평화체</option>
+                <option value="4">교보손글씨2020박도연</option>
+            </select>
+            <button type="button" onclick="bold()">B</button>
+            <button type="button" onclick="normal()">N</button>
+            </form>
+        </div>
+        <hr>
+        <div class="memo">
+            <form>
+                <textarea name="text" id="text_m" class="area"></textarea>
+            </form>
+        </div>
+    </div>
+    <script src="memo.js"></script>
+</body>
+</html>
