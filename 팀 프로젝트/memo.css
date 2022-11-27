@@ -1,0 +1,64 @@
+body{
+    /* background-color: rgb(231, 230, 230); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+.frame{
+    background-color: rgba(214, 212, 212, 0.589);
+    margin-top: 5%;
+    width: 700px;
+    height: 710px;
+    border-radius: 5%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.nav1{
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    height: 40px;
+}
+.nav2{
+    display: flex;
+    width: auto;
+    height: 40px;
+}
+*{
+    font-family: '나눔스퀘어';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: '휴먼범석체';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '평창평화체';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: '교보손글씨2020박도연';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.memo{
+    margin-left: 2%;
+}
+textarea{
+    resize: none;
+    width: 665px;
+    height: 570px;
+}
+hr{
+    height: 2px;
+    background-color: gray;
+}

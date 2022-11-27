@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drawPage</title>
+    <link rel="stylesheet" href="draw.css">
+</head>
+<body> 
+    <input type="file" id="file" onchange = "theimage()" style="display: none;" >
+    <img id="previewImg" alt="이미지 영역" style="display: none;">
+            
+    <div class="frame">
+
+        <div class="nav1">
+            <button class="save" style="width: 80px; height: 40px;">SAVE</button>
+            <button onclick="reset_js()" style="width: 80px; height: 40px">RESET</button>
+            <button onclick="undo_js()" style="width: 80px; height: 40px;">
+                <img src="image/undo.png" style="width: 20px; height: 20px; border: none;" alt="되돌리기">
+            </button>
+        </div>
+
+        <hr>
+
+        <div class="nav2">
+            <button onclick="open_border()">
+                <img src="image/border.png" alt="펜굵기" style="width: 40px;height: 40px;">
+            </button>
+            <button id="eraser_js">
+                <img id="change" src="image/eraser.png" alt="지우개" style="width: 40px; height: 40px">
+            </button>
+            <button onclick="open_color()">
+                <img src="image/paint.png" alt="색깔" style="width: 40px; height: 40px">
+            </button>
+            <button onclick="open_shape()">
+                <img src="image/shape.png" alt="도형" style="width: 40px; height: 40px">
+            </button>
+            <button onclick="document.all.file.click()">
+                <img src="image/down.png" alt="다운" style="width: 40px; height: 40px">
+            </button>
+            <button onclick="load_img()">
+                <img src="image/image.png" alt="사진" style="width: 40px; height: 40px" >
+            </button>
+        </div>
+        <hr>
+
+        <div class="selectBorder" id="openBorder">
+            <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1">
+        </div>
+        <div class="controals" id="opencolor">
+            <div class="controals_colors" id="JsColor">
+                <div class="controals_colors jsColor" style="background-color: black;"></div>
+                <div class="controals_colors jsColor" style="background-color: red;"></div>
+                <div class="controals_colors jsColor" style="background-color: orange;"></div>
+                <div class="controals_colors jsColor" style="background-color: yellow;"></div>
+                <div class="controals_colors jsColor" style="background-color: green;"></div>
+                <div class="controals_colors jsColor" style="background-color: blue;"></div>
+                <div class="controals_colors jsColor" style="background-color: navy;"></div>
+                <div class="controals_colors jsColor" style="background-color: purple;"></div>
+            </div>
+        </div>
+
+        <div class="selectShape" id="openShape">
+            <div class="setbutd">
+                <button onclick="shape_js('square')"><img src="image/square.png" alt="사각형" style="width: 30px; height: 30px;"></button>
+                <button onclick="shape_js('triangle')"><img src="image/triangle.png" alt="삼각형" style="width: 35px; height: 35px;"></button>
+                <button onclick="shape_js('circle')"><img src="image/circle.png" alt="원" style="width: 35px; height: 35px;"></button>    
+            </div>
+        </div>
+
+        <canvas id="jsCanvas" class="canvas"></canvas>
+    </div>
+    <script src="draw.js"></script>
+</body>
+</html>
