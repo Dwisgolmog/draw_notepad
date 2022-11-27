@@ -1,1 +1,0 @@
-# tanaka_hazumaruyo
