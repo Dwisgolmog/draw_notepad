@@ -19,12 +19,18 @@ body{
     display: flex;
     flex-direction: row-reverse;
     width: auto;
-    height: 40px;
+    height: 45px;
 }
 .nav2{
     display: flex;
     width: auto;
     height: 40px;
+}
+.nav1 button{
+    margin: 10px;
+    border: 2px solid rgb(209, 209, 209);
+    border-radius: 15px;
+    box-shadow: 0 5px 6px rgb(151, 150, 150); 
 }
 *{
     font-family: '나눔스퀘어';
